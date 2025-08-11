@@ -1,0 +1,134 @@
+.users {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.users-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.users-stats {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.users-table {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th {
+  background-color: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.users-table tbody tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+.role-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.role-icon.admin {
+  color: var(--danger-color);
+}
+
+.role-icon.user {
+  color: var(--info-color);
+}
+
+.role-icon.readonly {
+  color: var(--warning-color);
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-badge.admin {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.role-badge.user {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--info-color);
+}
+
+.role-badge.read-only {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.users-table select {
+  padding: 0.375rem 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.empty-state {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .users-table {
+    overflow-x: auto;
+  }
+  
+  .users-table table {
+    min-width: 600px;
+  }
+}
