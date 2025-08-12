@@ -39,14 +39,14 @@ const analyticsLimiter = rateLimit({
   message: "Too many analytics requests, please try again later.",
 });
 
-app.use("/api/auth", authLimiter, authRoutes);
-app.use("/api/users", apiLimiter, userRoutes);
-app.use("/api/transactions", apiLimiter, transactionRoutes);
-app.use("/api/analytics", analyticsLimiter, analyticsRoutes);
-app.use("/api/categories", apiLimiter, categoryRoutes);
+app.use("/auth", authLimiter, authRoutes);
+app.use("/users", apiLimiter, userRoutes);
+app.use("/transactions", apiLimiter, transactionRoutes);
+app.use("/analytics", analyticsLimiter, analyticsRoutes);
+app.use("/categories", apiLimiter, categoryRoutes);
 
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on p ort ${PORT}`);
 });
